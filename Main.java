@@ -8,10 +8,10 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("На данный момент база пуста. Чтобы начать заполнение. введите 'y': ");
+        System.out.println("На данный момент база пуста. Чтобы начать заполнение введите y: ");
 
         String confirm = scanner.nextLine();
-        if (confirm.equals('y')) {
+        if (confirm.equals("y")) {
             int tempPercent;
             int tempId = 1;
             int remainder = 100;
@@ -69,13 +69,14 @@ public class Main {
 
                 Random random = new Random();
                 int num;
-                System.out.println("Начинается розыгрыш подарков! Введите количество раундов: ");
+                System.out.print("Начинается розыгрыш подарков! Введите количество раундов: ");
                 int round = Integer.parseInt(scanner.nextLine());
                 for(int i = 0; i < round; i++) {
                     System.out.printf("В %d-м раунде розыгрыша приз - ", i+1);
                     num = random.nextInt(10);
                     System.out.printf("%s", name[num]);
-                    pw.printf("%s (с ID %d и вероятностью выпадения %d процентов)", name[num], id[num], weight[num] * 10);
+                    pw.printf("%s (с ID %d и вероятностью выпадения %d процентов) \n", name[num], id[num], weight[num] * 10);
+                    System.out.println();
                 }
                 pw.close();
                 System.out.println("Результаты розыгрыша успешно сохранены");
