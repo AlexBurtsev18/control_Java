@@ -1,5 +1,5 @@
 public class Toy {
-    int id;
-    int weight;
-    String name;
+    int idToy;
+    int weightToy;
+    String nameToy;
 }
